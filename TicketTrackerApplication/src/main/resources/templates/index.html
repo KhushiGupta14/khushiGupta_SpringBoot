@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<style>
+body {
+	background-color: Thistle;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
+}
+
+.text-center h1 {
+	margin: 20px 0;
+	color: #4B0082;
+}
+
+.text-center h1 a {
+	text-decoration: none;
+	color: #4B0082;
+	font-size: 1.8em;
+	padding: 12px 24px;
+	border-radius: 8px;
+	background-color: #0000FF;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
+	display: inline-block;
+}
+
+.text-center h1 a:hover {
+	background-color: #0000CC;
+	color: white;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	width: 100%;
+	position: relative;
+}
+</style>
+</head>
+
+<body>
+	<div th:replace="header :: header"></div>
+
+	<div class="container">
+		<div class="text-center">
+			<h1>
+				<a th:href="@{/admin/tickets}">Click here to go to Ticket
+					Tracker Application</a>
+			</h1>
+		</div>
+	</div>
+
+	<footer th:replace="footer :: footer"></footer>
+</body>
+
+</html>
